@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, BookOpen, GraduationCap, Users } from "lucide-react"
 import { ImageSlider } from "@/components/ui/image-slider"
+import { Link } from "react-router-dom"
 
 const heroImages = [
   {
@@ -76,39 +77,39 @@ const Home = () => {
                 className="h-48 w-full object-cover"
               />
               <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">JEE Main</h3>
+                <h3 className="mb-2 text-xl font-semibold">JEE Main,NEET,MHT-CET Fondation</h3>
                 <p className="mb-4 text-gray-600">
-                  Comprehensive preparation for JEE Main examination.
+                  Comprehensive preparation for competitive exams.Covers all basics and advanced topics.
                 </p>
-                <Button className="w-full bg-orange-600 text-white hover:bg-orange-700">Learn More</Button>
+                <Link to="/courses"><Button className="w-full bg-orange-600 text-white hover:bg-orange-700">Explore More</Button></Link>
               </div>
             </div>
             <div className="overflow-hidden rounded-lg bg-white shadow-lg">
               <img
                 src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="NEET"
+                alt="Fondation batch"
                 className="h-48 w-full object-cover"
               />
               <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">NEET</h3>
+                <h3 className="mb-2 text-xl font-semibold">5 to 10 batches</h3>
                 <p className="mb-4 text-gray-600">
-                  Expert guidance for NEET medical entrance exam.
+                  Expert guidance for the students who are in 5th to 10th standard.Covers all basics and extra activities.like public speaking,sports,etc.
                 </p>
-                <Button className="w-full bg-orange-600 text-white hover:bg-orange-700">Learn More</Button>
+                <Link to="/courses"><Button className="w-full bg-orange-600 text-white hover:bg-orange-700">Explore More</Button></Link>
               </div>
             </div>
             <div className="overflow-hidden rounded-lg bg-white shadow-lg">
               <img
                 src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="MHT-CET"
+                alt="5th to 10th batch"
                 className="h-48 w-full object-cover"
               />
               <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">MHT-CET</h3>
+                <h3 className="mb-2 text-xl font-semibold">Public Speaking,Critical Thinking,and Logic Building</h3>
                 <p className="mb-4 text-gray-600">
-                  Specialized coaching for MHT-CET examination.
+                  Specialized coaching for the public speaking,critical thinking,and logic building.
                 </p>
-                <Button className="w-full bg-orange-600 text-white hover:bg-orange-700">Learn More</Button>
+                <Link to={'/courses'}> <Button className="w-full bg-orange-600 text-white hover:bg-orange-700">Explore More</Button></Link>
               </div>
             </div>
           </div>

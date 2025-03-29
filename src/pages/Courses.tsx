@@ -1,16 +1,131 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, BookOpen, Clock, GraduationCap, Star, Users } from "lucide-react"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { ArrowRight, BookOpen, Clock, Star, Users } from "lucide-react"
+import { IoLogoWhatsapp, IoMdCall } from "react-icons/io";
 
 const Courses = () => {
   const courses = [
+    
     {
-      title: "JEE Main & Advanced",
-      description: "Comprehensive preparation for JEE Main and Advanced with expert faculty and proven track record.",
+      title: "5th",
+      description: "Expert guidance for all the topics in 5th standard within the syllabus ",
+      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80",
+      duration: "1Years",
+      students: "15+",
+      rating: 4.8,
+      price: "₹6,000/year",
+      features: [
+        "personlized coaching",
+        "Good Hand Writing practice",
+        "Expert faculty guidance",
+        "Study material",
+        "Performance analysis",
+        "Logic building",
+        "Motivational sessions and seminars"
+      ]
+    },
+    {
+      title: "6th",
+      description: "Expert guidance for all the topics in 6th standard within the syllabus ",
+      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80",
+      duration: "1Years",
+      students: "15+",
+      rating: 4.8,
+      price: "₹6,000/year",
+      features: [
+        "personlized coaching",   
+        "Good Hand Writing practice",
+        "Expert faculty guidance",
+        "Study material",
+        "Performance analysis",
+        "Logic building",
+        "Motivational sessions and seminars"
+      ]
+    },
+    {
+      title: "7th",
+      description: "Targeted preparation for all 7th standard topics within the syllabus",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+      duration: "1 Year",
+      students: "20+",
+      rating: 4.7,
+      price: "₹9,000/year",
+      features: [
+        "personlized coaching",
+        "test series",
+        "Good Hand Writing practice",
+        "Expert faculty guidance",
+        "Study material",
+        "Performance analysis",
+        "Logic building",
+        "Motivational sessions and seminars"
+      ]
+    },
+    {
+      title: "8th",
+      description: "Targeted preparation for all 8th standard topics within the syllabus",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+      duration: "1 Year",
+      students: "18+",
+      rating: 4.7,
+      price: "₹12,000/year",
+      features: [
+        "personlized coaching",
+        "test series",
+        "Good Hand Writing practice",
+        "Expert faculty guidance",
+        "Study material",
+        "Performance analysis",
+        "Logic building",
+        "Motivational sessions and seminars"
+      ]
+    },
+    {
+      title: "9th",
+      description: "Targeted preparation for all 9th standard topics within the syllabus",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+      duration: "1 Year",
+      students: "16+",
+      rating: 4.7,
+      price: "₹13,000/year",
+      features: [
+        "personlized coaching",
+        "test series",
+        "Good Hand Writing practice",
+        "Expert faculty guidance",
+        "Study material",
+        "Performance analysis",
+        "Logic building",
+        "Motivational sessions and seminars"
+      ]
+    },
+    {
+      title: "10th",
+      description: "Targeted preparation for all 10th standard topics within  the state board syllabus",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+      duration: "1 Year",
+      students: "16+",
+      rating: 4.7,
+      price: "₹13,000/year",
+      features: [
+        "personlized coaching",
+        "Board exam preparation",
+        "test series",  
+        "Expert faculty guidance",
+        "Study material",
+        "Performance analysis",
+        "Logic building",
+        "Motivational sessions and seminars"
+      ]
+    },
+    {
+      title: "NEET,JEE Mains,MHT-CET Foundation",
+      description: "Comprehensive preparation for NEET,JEE Mains,MHT-CET Foundation and basic to advanced topics in simple and creative way",
       image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      duration: "2 Years",
-      students: "500+",
+      duration: "1 Years",
+      students: "10+",
       rating: 4.9,
-      price: "₹45,000/year",
+      price: "₹10,000/year",
       features: [
         "Comprehensive study material",
         "Regular mock tests",
@@ -20,37 +135,21 @@ const Courses = () => {
       ]
     },
     {
-      title: "NEET",
-      description: "Expert guidance for NEET preparation with focus on Biology, Chemistry, and Physics.",
-      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80",
-      duration: "2 Years",
-      students: "400+",
-      rating: 4.8,
-      price: "₹40,000/year",
+      title: "Public Speaking and creatical thinking",
+      description: "Comprehensive preparation for Public Speaking and creatical thinking for the leadership skills",
+      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      duration: "3 Months",
+      students: "10+",
+      rating: 4.9,
+      price: "₹5,000/year",
       features: [
-        "Specialized Biology coaching",
-        "Regular practice tests",
-        "Expert faculty guidance",
-        "Study material",
-        "Performance analysis"
+        "Comprehensive study material",
+        "Regular mock tests",
+        "Personalized guidance",
+        "Doubt clearing sessions",
+        "Performance tracking"
       ]
     },
-    {
-      title: "MHT-CET",
-      description: "Targeted preparation for MHT-CET with state-specific syllabus coverage.",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
-      duration: "1 Year",
-      students: "300+",
-      rating: 4.7,
-      price: "₹35,000/year",
-      features: [
-        "State-specific syllabus",
-        "Regular assessments",
-        "Expert guidance",
-        "Study resources",
-        "Progress tracking"
-      ]
-    }
   ]
 
   return (
@@ -82,7 +181,7 @@ const Courses = () => {
       {/* Courses Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 p-5 md:grid-cols-2 lg:grid-cols-3">
             {courses.map((course) => (
               <div
                 key={course.title}
@@ -130,9 +229,25 @@ const Courses = () => {
 
                   <div className="flex items-center justify-between">
                     <span className="text-xl font-bold text-green-600">{course.price}</span>
-                    <Button className="bg-orange-600 text-white hover:bg-orange-700">
-                      Enroll Now
-                    </Button>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button>Enroll Now</Button>
+                      </DialogTrigger>
+                      <DialogContent>
+                        <DialogHeader>
+                          <DialogTitle>Contact Us for Enrollment</DialogTitle>
+                        </DialogHeader>
+                        <DialogDescription className="text-center text-gray-600">
+                          Please drop the query on whatsapp or call us on the number given below
+                        </DialogDescription>
+                        <div className="flex items-center justify-center gap-2">
+                          <a href="https://wa.me/919270165356" > <Button className="bg-green-500 text-white text-center hover:bg-green-600"><IoLogoWhatsapp className="size-5" /> whatsapp</Button></a>
+                          <a href="tel:+919270165356" className=""><Button className="bg-blue-500 text-white text-center hover:bg-blue-600"><IoMdCall className="size-5" /> call us</Button></a>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
+
+            
                   </div>
                 </div>
               </div>
